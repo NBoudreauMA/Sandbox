@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Public_Logic — SmartTown Sandbox</title><link rel="manifest" href="./manifest.webmanifest"/><link rel="stylesheet" href="./assets/style.css"/></head><body>
+<header class="header no-print"><img class="logo" src="./assets/logo.svg" alt="logo"/><div><h1><span id="town-name">Pine Hollow</span> — SmartTown by Public_Logic</h1><div class="sub" id="town-tag">Small town, big heart</div></div><div style="margin-left:auto;display:flex;gap:8px;align-items:center"><label class="small">Skin</label><select id="skin-select"><option value="pine">Pine Hollow</option><option value="barn">Red Barn</option><option value="willow">Willow Creek</option></select><button id="sales" class="secondary">Sales Mode</button><button id="theme">Theme</button><button id="reset">Reset</button><button id="export">Export</button><label class="small" for="import" style="cursor:pointer"><span class="badge">Import</span></label><input type="file" id="import" accept="application/json" class="no-print" style="display:none"/></div></header>
+<div class="container">
+  <section class="hero">
+    <div>
+      <div class="kicker">Municipal-first • VAULT discipline • HubbCONNECT story</div>
+      <h2>Municipal-first. Modern by default.</h2>
+      <p>SmartTown turns DPW, Clerk, Finance, and Records into simple, connected flows — built for small towns, without the noise.</p>
+      <div class="cta"><a href="./modules/fix/"><button class="secondary">Start SmartFIX</button></a><button class="ghost" id="replay">Replay Tour</button></div>
+      <div class="small" style="margin-top:6px">Demo only: all data is fake and stored in your browser.</div>
+    </div>
+    <div class="card kpi">
+      <div class="kicker">This week at a glance</div>
+      <canvas id="spark" width="380" height="120" style="width:100%;height:120px"></canvas>
+      <div class="grid cols-2" style="margin-top:8px">
+        <div><div class="small">SmartFIX</div><div id="kpi-issues" style="font-weight:800;font-size:18px">0</div></div>
+        <div><div class="small">SmartPERMIT</div><div id="kpi-lic" style="font-weight:800;font-size:18px">0</div></div>
+        <div><div class="small">SmartFISCAL</div><div id="kpi-ap" style="font-weight:800;font-size:18px">0</div></div>
+        <div><div class="small">SmartTIME</div><div id="kpi-ts" style="font-weight:800;font-size:18px">0</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid cols-3">
+    <div class="card"><div class="callout">Pitch-friendly</div><div class="kicker">Why Public_Logic</div><p><strong>VAULT mindset</strong> for records clarity and retention. A <strong>Hub</strong> that feels like your town — no secret wiring, no endpoints, no proprietary sauce in the demo.</p><div class="alert small"><strong>Zero Secrets:</strong> Front-end only with localStorage. Safe fake data.</div></div>
+    <div class="card"><div class="callout">1-click flows</div><div class="kicker">Quick Actions</div><div class="grid cols-2"><a href="./modules/permit/"><button class="secondary">New Permit</button></a><a href="./modules/fiscal/"><button class="secondary">AP Batch</button></a><a href="./modules/timesheet/"><button class="secondary">Timesheet</button></a><a href="./modules/vault/"><button class="secondary">Open VAULT</button></a></div><div class="small" style="margin-top:6px">Prefer one list? Try <a href="./modules/workqueue/">SmartQueue</a>.</div></div>
+    <div class="card"><div class="kicker">Integrations (HubConnect)</div><p class="small">Story-only stubs: CivicSite CMS, SharePoints, PayGate, NotifyHub — toggleable in <a href="./modules/hubconnect/">HubbCONNECT</a>.</p></div>
+  </div>
+
+  
+  <div class="card shadow-xl">
+    <div class="kicker">Municipal pain points → our angle</div>
+    <div class="pain">
+      <div class="item"><span class="emoji">🧾</span><strong>Too many forms</strong><div class="micro">Residents hit five systems. Staff retypes the same fields.</div><div class="badge tag">SmartFIX + SmartPERMIT intake</div></div>
+      <div class="item"><span class="emoji">🔎</span><strong>Lost in records</strong><div class="micro">Nobody knows where the “final” PDF lives.</div><div class="badge tag">SmartVAULT retention & facets</div></div>
+      <div class="item"><span class="emoji">🔁</span><strong>Hand-offs break</strong><div class="micro">Email threads are the workflow.</div><div class="badge tag">SmartQueue + receipt prints</div></div>
+    </div>
+  </div>
+
+  <div class="outcomes">
+    <div class="item"><div class="kicker">Outcome</div><h3 class="gradient-text">1-stop resident intake</h3><p class="small">Plain language forms that route to the right list automatically.</p></div>
+    <div class="item"><div class="kicker">Outcome</div><h3 class="gradient-text">Board-ready packets</h3><p class="small">Agenda items and receipts print cleanly — no mail merge wizardry.</p></div>
+    <div class="item"><div class="kicker">Outcome</div><h3 class="gradient-text">Less swivel chair</h3><p class="small">HubbCONNECT stories show how we plug into the stack without exposing the wiring.</p></div>
+  </div>
+
+  <nav class="grid cols-4 modules">
+    <a href="./modules/fix/"><strong>SmartFIX</strong> — DPW & Facilities <span class="badge info" style="float:right">Demo</span></a>
+    <a href="./modules/permit/"><strong>SmartPERMIT</strong> — Licensing</a>
+    <a href="./modules/fiscal/"><strong>SmartFISCAL</strong> — AP Turnover</a>
+    <a href="./modules/timesheet/"><strong>SmartTIME</strong> — Timesheet</a>
+    <a href="./modules/clerk/"><strong>SmartCLERK</strong> — Agenda</a>
+    <a href="./modules/vault/"><strong>SmartVAULT</strong> — Records</a>
+    <a href="./modules/crm/"><strong>SmartCRM</strong> — Contacts</a>
+    <a href="./modules/notify/"><strong>SmartNOTIFY</strong> — Templates</a>
+    <a href="./modules/workqueue/"><strong>SmartQueue</strong> — Work Queue</a>
+    <a href="./modules/uikit/"><strong>SmartUI Kit</strong> — Components</a>
+    <a href="./modules/embed/"><strong>SmartEmbed</strong> — CivicSite/SharePoints</a>
+    <a href="./modules/hubconnect/"><strong>HubbCONNECT</strong> — Integrations</a>
+  </nav>
+
+  <footer>© Public_Logic — SmartTown™ for Rural America (demo).</footer>
+</div>
+
+<div class="modal no-print"><div class="box"></div></div>
+<script src="./lib/utils.js"></script><script src="./lib/sandbox-api.js"></script>
+<script>
+theme.init(); skins.init(); sales.init(); tour.start();
+document.getElementById('theme').addEventListener('click', theme.toggle);
+document.getElementById('reset').addEventListener('click', ()=>{ if(confirm('Reset demo data?')){ SmartTown.reset(); location.reload(); }});
+document.getElementById('export').addEventListener('click', ()=> dataIO.export());
+document.getElementById('import').addEventListener('change', e=>{const f=e.target.files[0]; if(f) dataIO.import(f);});
+document.getElementById('replay').addEventListener('click', ()=> tour.reset());
+
+const s=SmartTown.stats();
+$('#kpi-issues').textContent=s.issues; $('#kpi-lic').textContent=s.licenses; $('#kpi-ap').textContent=s.ap_turnovers; $('#kpi-ts').textContent=s.timesheets;
+
+// Tiny spark chart (no libs)
+(function(){
+  const el=document.getElementById('spark'); if(!el) return; const ctx=el.getContext('2d');
+  const points = Array.from({length:14}, (_,i)=> Math.round(8+Math.random()*12) );
+  const w=el.width, h=el.height, max=Math.max(...points)+2, min=Math.min(...points)-2;
+  ctx.clearRect(0,0,w,h);
+  ctx.strokeStyle = '#3f8852'; ctx.lineWidth=2; ctx.beginPath();
+  points.forEach((v,i)=>{ const x = (i/(points.length-1))* (w-20) + 10; const y = h-10 - ((v-min)/(max-min))*(h-20); i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
+  ctx.stroke();
+  ctx.fillStyle = '#e0b356'; points.slice(-3).forEach((v,i)=>{ const idx=points.length-3+i; const x=(idx/(points.length-1))*(w-20)+10; const y=h-10-((v-min)/(max-min))*(h-20); ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2); ctx.fill(); });
+})();
+</script>
+</body></html>

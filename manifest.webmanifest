@@ -1,0 +1,9 @@
+{
+  "name": "Public_Logic SmartTown",
+  "short_name": "SmartTown",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbfbf8",
+  "theme_color": "#2f6f3e",
+  "icons": []
+}
